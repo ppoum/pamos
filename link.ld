@@ -20,9 +20,9 @@ SECTIONS
         *(.rodata*)
     } > LOWER_HALF
 
-    .text ALIGN(0x1000) : AT(ORIGIN(HIGHER_HALF)) {
-        *(.text.kmain)
-        *(.text*)
+    .ltext ALIGN(0x1000) : AT(ORIGIN(HIGHER_HALF)) {
+        *(.ltext.kmain)
+        *(.ltext*)
     } > HIGHER_HALF
 
     .lrodata ALIGN(0x1000) : {

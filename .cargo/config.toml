@@ -3,7 +3,7 @@ target = "x86_64-unknown-none"
 
 rustflags = [
     "-Crelocation-model=static",
-    "-Ccode-model=kernel",
+    "-Ccode-model=large",
     "-C",
     "link-arg=-Tlink.ld",
 ]
