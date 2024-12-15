@@ -1,0 +1,10 @@
+# We require the use of a nightly toolchain to build the `core` crate (hidden behind build-std)
+# This is needed since our relocation model is static and our code model is the kernel mode.
+# If we use the precompiled core crate, large relocations will occur when jumping between
+# `core` code and kernel code, causing linking errors.
+# Can be removed once `build-std` is stabilized
+
+# !! This is not an invitation to use APIs gated behind nightly features.
+[toolchain]
+# 1.83.0 branch date
+channel = "nightly-2024-10-11"

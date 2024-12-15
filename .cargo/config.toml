@@ -7,3 +7,6 @@ rustflags = [
     "-C",
     "link-arg=-Tlink.ld",
 ]
+
+[unstable]
+build-std = ["core"]
