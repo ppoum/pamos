@@ -13,7 +13,7 @@ _start:
     mov cr3, rcx
 
     // Configure stack
-    mov rsp, 0x19fff
+    mov rsp, 0x87fff
 
     // Load GDT included in our pages
     lgdt gdtr_ptr
@@ -26,10 +26,8 @@ _start:
     mov gs, ax
     mov ss, ax
 
-    mov eax, [rip + mb2_magic]
-    mov rbx, [rip + mb2_ptr]
-    mov edi, eax
-    mov esi, ebx
+    mov edi, [rip + mb2_magic]
+    mov rsi, [rip + mb2_ptr]
 
     movabs rax, offset kmain
     jmp rax
