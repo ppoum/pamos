@@ -10,3 +10,4 @@ test = false
 bench = false
 
 [dependencies]
+pamos_macros = { path = "pamos_macros" }
